@@ -201,8 +201,21 @@ img
 .SocialMediaIcon
 {
     width: 40px;
+
 }
 
+.Footer__items-flex
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer
+{
+    background-color: #f8d940;
+    padding: 0.2rem 0;
+}
 
 @keyframes FadeIn
 {
