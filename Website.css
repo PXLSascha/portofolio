@@ -1,0 +1,177 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace, Geneva, Tahoma, sans-serif;
+    color: darkblue;
+
+}
+
+body
+{
+    background: url("Assets/Light_background.jfif") no-repeat;
+    background-size: 100%;
+
+}
+
+a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+header
+{
+    background-color: #798bdf;
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+h1
+{
+    color: black;
+
+}
+
+
+
+table
+{
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    width: 60%;
+    background-color: black;
+    animation-name: FadeIn;
+    animation-duration: 2s;
+}
+
+tr:last-child > td:last-child
+{
+  padding-bottom: 70px;
+}
+
+tr
+{
+    margin: 0;
+}
+
+td
+{
+    background: white;
+    white-space: none;
+    padding: 40px 140px 0px 80px;
+}
+
+th
+{
+
+}
+
+h1
+{
+    margin: 0;
+}
+
+h2
+{
+    margin: 0;
+}
+
+
+
+h3
+{
+    margin: 0;
+    padding: 0;
+}
+
+h4
+{
+    margin: 0;
+    padding: 0;
+}
+
+
+nav > ul
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: end;
+    background-color: #798bdf;
+    margin: 0;
+}
+
+ul
+{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(74, 118, 138, 0.63);
+    justify-content: center;
+}
+
+li
+{
+    padding: 10px;
+    color: black;
+}
+
+nav > ul > li:hover
+{
+    background: white;
+}
+
+.SocialMediaIconList
+{
+    margin: 0px 20%;
+    animation-name: FadeIn;
+    animation-duration: 2s;
+}
+
+article
+{
+    margin: 50px 0px;
+}
+
+article > h2
+{
+    background-color: white;
+    text-align: center;
+}
+
+p
+{
+    background-color: white;
+    text-align: center;
+    display: block;
+}
+
+img
+{
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
+}
+
+.SocialMediaIconList > ul > li:hover
+{
+    filter: brightness(50%);
+}
+
+.SocialMediaIcon
+{
+    width: 40px;
+}
+
+
+@keyframes FadeIn
+{
+    from {opacity: 0}
+    to {opacity: 100}
+}
