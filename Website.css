@@ -25,6 +25,34 @@ img:active
     box-shadow: 0 0 0 5px yellow;
 }
 
+table
+{
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    width: 60%;
+    background-color: black;
+    animation-name: FadeIn;
+    animation-duration: 2s;
+}
+
+tbody > tr:nth-child(even)
+{
+    background-color: gray;
+}
+
+tbody > tr:nth-child(odd)
+{
+    background-color: darkgray;
+}
+
+td
+{
+    white-space: none;
+    padding: 40px 140px 0px 80px;
+}
+
 a
 {
     text-decoration: none;
@@ -43,43 +71,6 @@ header
 h1
 {
     color: black;
-
-}
-
-
-
-table
-{
-    border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-    width: 60%;
-    background-color: black;
-    animation-name: FadeIn;
-    animation-duration: 2s;
-}
-
-tr:last-child > td:last-child
-{
-  padding-bottom: 70px;
-}
-
-tr
-{
-    margin: 0;
-}
-
-td
-{
-    background: white;
-    white-space: none;
-    padding: 40px 140px 0px 80px;
-}
-
-th
-{
-
 }
 
 h1
