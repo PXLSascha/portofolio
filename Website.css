@@ -211,6 +211,11 @@ img
     justify-content: space-between;
 }
 
+.Footer__items-flex > p > a:hover
+{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
 footer
 {
     background-color: #f8d940;
