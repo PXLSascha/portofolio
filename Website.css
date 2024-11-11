@@ -15,6 +15,13 @@ body
 
 }
 
+img:hover
+{
+    box-shadow: 0 0 50px 5px yellow;
+}
+
+
+
 a
 {
     text-decoration: none;
