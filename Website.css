@@ -4,15 +4,20 @@
     padding: 0;
     box-sizing: border-box;
     font-family: monospace, Geneva, Tahoma, sans-serif;
+}
 
-
+html
+{
+    scroll-behavior: smooth;
 }
 
 :root
 {
     --education-grid-color: rgb(214, 198, 173);
-    --secondary-color: #CCCCCC;
     --roundness: 0.5rem;
+
+    --main-color: #ffd52b;
+    --secondary_color: #fff289;
 }
 
 header
@@ -25,6 +30,9 @@ header
 body
 {
     background-color: #dfcb8e;
+    animation-name: slidein;
+    animation-duration: 2s;
+    margin: 0 auto;
 }
 
 main
@@ -36,7 +44,9 @@ main
 
 header
 {
-
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .whole__wide-background
@@ -44,6 +54,8 @@ header
     margin: 0;
     background-image: url("Assets/bubbles.png");
     background-repeat: repeat;
+    animation-name: fadein;
+    animation-duration: 2s;
 }
 
 .backdrop__blur-image
@@ -63,6 +75,7 @@ header
     display: grid;
     grid-template-rows: 38rem auto;
     grid-template-columns: auto auto;
+    border-top: 2px solid black;
 }
 
 .website__intro--image
@@ -79,6 +92,7 @@ header
     text-align: center;
     grid-column: 2 / 3;
     grid-row: 1 / 1;
+    border-left: 2px solid black;
 }
 
 .website__intro-image > img
@@ -93,17 +107,20 @@ header
     list-style: none;
     text-align: center;
     display: inline-block;
+
 }
 
 .website__intro-list > li
 {
-    padding: 1.3rem 0;
+    margin: 2.5rem 0;
+
 }
 
 .website__intro-list > li > h1
 {
     font-size: 3rem;
     font-weight: bolder;
+
 }
 
 .website__intro-image
@@ -121,6 +138,11 @@ header
     grid-row: 2 / 2;
     grid-column: 1 / 2 span;
     padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: 2px solid black;
+    margin-bottom: 0;
+    border-bottom: 5px solid black;
+
 }
 
 .backdrop__blur-aboutme
@@ -138,136 +160,136 @@ img:active
     box-shadow: 0 0 0 5px yellow;
 }
 
-.education__section-grid
+.education__section-timeline
 {
-    display: grid;
-    grid-template-rows: auto auto auto auto auto auto;
-    grid-template-columns: auto auto auto auto auto;
-    width: 40%;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+    /* De witte streep */
+.education__section-timeline::after
+{
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container rond een content*/
+.education__timeline-container
+{
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* De punten op de streep*/
+.education__timeline-container::after
+{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* fixt de cirkels aan de rechterzijde */
+.education__timeline-right::after {
+    left: -16px;
+}
+
+/* plaats content naar links */
+.education__timeline-left
+{
+    left: 0;
+}
+
+/* plaats content naar rechts */
+.education__timeline-right
+{
+    left: 50%;
+}
+
+/* plaats de 'pijlen' die naar rechts wijzen */
+.education__timeline-left::before
+{
+    content: " ";
+    position: absolute;
+    top: 22px;
+    right: 30px;
+    border: solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* plaats de 'pijlen' die naar links wijzen */
+.education__timeline-right::before
+{
+    content: " ";
+    position: absolute;
+    top: 22px;
+    left: 32px;
+    rotate: 180deg;
+    border: solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+
+.education__timeline-content
+{
+    padding: 30px 20px;
+    background-color: var(--main-color);
+    position: relative;
+    border-radius: 6px;
+}
+
+.education__timeline-left
+{
+
+}
+
+.skills__section-design
+{
+    width: 50%;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: 1rem;
+    padding: 0.5rem 1rem 1.5rem 1rem;
     background-color: rgba(255, 255, 255, 0.42);
-    text-align: center;
     border-radius: 1.5rem;
 }
 
-.arrow-right1
+.skills__section-design > h2
 {
-    scale: 1.2;
-    font-size: 5rem;
-    margin-left: -4.3rem;
-    margin-right: 3.8rem;
-    grid-row: 1 / 2;
-    grid-column: 2 / span 1;
-    font-weight: bolder;
-    color: var(--education-grid-color);
+   padding-bottom: 1rem;
 }
 
-.education__griditem-designleft
+.skills__section-flex
 {
-    background-color: var(--education-grid-color);
-    border-radius: 2rem;
-    margin-right: 3rem;
+    display: flex;
+    justify-content: space-between;
 }
 
-.education__griditem-designright
+.skills__section-flex > li
 {
-    background-color: var(--education-grid-color);
-    border-radius: 2rem;
-    margin-left: 3rem;
-
-}
-
-.education__griditem-1
-{
-    grid-row: 1 / span 1;
-    grid-column: 1 / span 1;
-}
-
-.education__griditem-2
-{
-    grid-row: 3 / span 1;
-    grid-column: 1 / span 1;
-}
-
-.education__griditem-3
-{
-    grid-row: 5 / span 1;
-    grid-column: 1 / span 1;
-}
-
-
-.education__grid-middle
-{
-    height: auto;
-    background: white;
-    width: 2rem;
-    grid-column: 3 / span 1;
-    grid-row: 1 / 8;
-}
-
-.education__grid-middle
-{
-    height: auto;
-    background: white;
-    width: 2rem;
-    grid-column: 3 / span 1;
-    grid-row: 1 / 8;
-}
-
-.education__griditem-4
-{
-    grid-row: 2 / span 1;
-    grid-column: 5 / span 1;
-}
-
-.education__griditem-5
-{
-    grid-row: 4 / span 1;
-    grid-column: 5 / span 1;
-}
-
-.education__griditem-6
-{
-    grid-row: 6 / span 1;
-    grid-column: 5 / span 1;
-}
-
-.education__grid-right
-{
-    grid-column: 3 / span 1;
-}
-
-.education__grid-right > ul > li
-{
-    list-style: none;
-    margin: 10rem 4rem 11rem 4rem;
-    font-size: 2rem;
-    background-color: rgba(0, 0, 0, 0.12);
-    display: inline-block;
-    border-radius: 2rem;
-    text-align: center;
-}
-
-.dot
-{
-    border-radius: 2rem;
-    border: 5px solid black;
-    background-color: #f8d940;
-    margin-top: 2rem;
-}
-
-.Skills__Section-design
-{
-    width: 30%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1rem;
-    background-color: rgba(255, 255, 255, 0.42);
-    text-align: center;
-    display: block;
-    border-radius: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main-color);
+    border-radius: 1rem;
+    padding: 0.5rem;
 }
 
 .Skills__Section-design> ul
@@ -286,7 +308,7 @@ img:active
     padding: 1.2rem 0 0 0;
 }
 
-.languages__Section-design
+.languages__section-design
 {
     width: 30%;
     margin-left: auto;
@@ -298,22 +320,37 @@ img:active
     border-radius: 1.5rem;
 }
 
+.languages__section-grid
+{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+}
+
+.languages__section-grid > h3:nth-child(1), .languages__section-grid > h3:nth-child(3), .languages__section-grid > h3:nth-child(5)
+{
+    background: var(--secondary_color);
+    border: solid black;
+    border-width: 0 6px 0 6px;
+    border-radius: 1rem;
+    border-collapse: collapse;
+    padding: 0 1rem;
+    margin: 1rem 2rem 1rem 2rem;
+}
+
+.languages__section-grid > p:nth-child(2), .languages__section-grid > p:nth-child(4), .languages__section-grid > p:nth-child(6)
+{
+    border: solid black;
+    border-width: 0 6px 0 6px;
+    padding: 0 1rem;
+    margin: 1rem 2rem 1rem 2rem;
+    background: var(--secondary_color);
+}
+
 .SkillsAndlanguages__container-flex
 {
     display: flex;
     justify-content: space-between;
-}
-
-p
-{
-    text-align: center;
-    font-size: 1.2rem;
-}
-
-a
-{
-    text-decoration: none;
-    color: inherit;
 }
 
 .HorizontalLine
@@ -367,12 +404,12 @@ a
 
 .Work__experience-list > li
 {
-    background-color: #fff289
+    background-color: var(--secondary_color);
 }
 
 .Work__experience-list > li:nth-child(1)
 {
-    background-color: #f8d940;
+    background-color: var(--main-color);
 }
 
 .Work__experience-list > li:nth-child(1) > h1
@@ -407,18 +444,6 @@ article
     margin: 50px 0px;
 }
 
-article > h2
-{
-    text-align: center;
-}
-
-p
-{
-
-    text-align: center;
-    display: block;
-}
-
 .SocialMediaIconList > ul > li:hover
 {
     filter: brightness(50%);
@@ -435,21 +460,61 @@ p
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    height: 1.55rem;
+
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Footer__items-flex > p
+{
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 .Footer__items-flex > p > a:hover
 {
     background-color: rgba(0, 0, 0, 0.2);
+
 }
 
 footer
 {
-    background-color: #f8d940;
-    padding: 0.2rem 0;
+    background-color: var(--main-color);
+
 }
 
-@keyframes FadeIn
+.center__text
+{
+    text-align: center;
+}
+
+ul, ol, li
+{
+    list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+h2
+{
+    text-align: center;
+}
+
+@keyframes fadein
 {
     from {opacity: 0}
     to {opacity: 100}
+}
+
+@keyframes slidein
+{
+    from {margin-left: 5rem}
+    to {margin-left: 0}
 }
