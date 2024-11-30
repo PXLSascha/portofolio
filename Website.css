@@ -18,14 +18,16 @@ html
 
     --main-color: #ffd52b;
     --secondary_color: #fff289;
+    --opacity_color: rgba(255, 255, 255, 0.22);
 }
 
-header
+nav
 {
-    padding: 2px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
+
 
 body
 {
@@ -35,27 +37,24 @@ body
     margin: 0 auto;
 }
 
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    background-image: url("Assets/bubbles.png");
+    background-repeat: repeat;
+    animation-name: fadein;
+    animation-duration: 2s;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 main
 {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-}
-
-header
-{
-    width: 97%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.whole__wide-background
-{
-    margin: 0;
-    background-image: url("Assets/bubbles.png");
-    background-repeat: repeat;
-    animation-name: fadein;
-    animation-duration: 2s;
 }
 
 .backdrop__blur-image
@@ -73,18 +72,20 @@ header
 .intro__div-grid
 {
     display: grid;
-    grid-template-rows: 38rem auto;
+    grid-template-rows: auto auto;
     grid-template-columns: auto auto;
     border-top: 2px solid black;
 }
 
 .website__intro--image
 {
-    display: block;
     margin: auto;
+}
+
+.website__intro--image > img
+{
     border-radius: 15rem;
-    grid-column: 1 / 2;
-    grid-row: 1 / 1;
+    margin: 1rem 0;
 }
 
 .intro__list-design
@@ -95,12 +96,6 @@ header
     border-left: 2px solid black;
 }
 
-.website__intro-image > img
-{
-    display: block;
-    margin: auto;
-    vertical-align: center;
-}
 
 .website__intro-list
 {
@@ -147,7 +142,7 @@ header
 
 .backdrop__blur-aboutme
 {
-    background-color: rgba(255, 255, 255, 0.39);
+    background-color: var(--opacity_color);
 }
 
 img:hover
@@ -163,8 +158,10 @@ img:active
 .education__section-timeline
 {
     position: relative;
-    max-width: 1200px;
+    width: 90%;
     margin: 0 auto;
+    background: var(--opacity_color);
+    border-radius: 3rem;
 }
 
     /* De witte streep */
@@ -185,7 +182,6 @@ img:active
 {
     padding: 10px 40px;
     position: relative;
-    background-color: inherit;
     width: 50%;
 }
 
@@ -268,7 +264,7 @@ img:active
     margin-right: auto;
     margin-top: 1rem;
     padding: 0.5rem 1rem 1.5rem 1rem;
-    background-color: rgba(255, 255, 255, 0.42);
+    background-color: var(--opacity_color);
     border-radius: 1.5rem;
 }
 
@@ -314,7 +310,7 @@ img:active
     margin-left: auto;
     margin-right: auto;
     margin-top: 1rem;
-    background-color: rgba(255, 255, 255, 0.42);
+    background-color: var(--opacity_color);
     text-align: center;
     display: block;
     border-radius: 1.5rem;
@@ -386,6 +382,10 @@ img:active
     flex-direction: row;
     justify-content: center;
     text-align: center;
+    background: var(--opacity_color);
+    border-radius: 3rem;
+    width: 95%;
+    margin: 0 auto;
 }
 
 .Work__experience-list
@@ -517,4 +517,349 @@ h2
 {
     from {margin-left: 5rem}
     to {margin-left: 0}
+}
+
+@media screen and (max-width: 1400px)
+{
+    body
+    {
+        /*background: #78195c;*/
+    }
+
+    .intro__div-grid
+    {
+
+    }
+
+    .AboutMe__section-design
+    {
+
+    }
+
+    .intro__list-design
+    {
+
+    }
+
+    .website__intro--image > img
+    {
+        border-radius: 15rem;
+        margin: 1rem 0;
+    }
+
+    .skills__section-design
+    {
+
+        width: 80%;
+    }
+
+    .Skills__List-design
+    {
+        width: 17rem;
+    }
+
+    .languages__section-design
+    {
+        width: 30rem;
+    }
+}
+
+@media screen and (max-width: 1200px)
+{
+    body
+    {
+        /*background: #21755b;*/
+    }
+
+    .intro__div-grid
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav > h1
+    {
+
+    }
+
+    .AboutMe__section-design
+    {
+
+    }
+
+    .intro__list-design
+    {
+        border-top: 2px solid black;
+    }
+
+    .website__intro--image > img
+    {
+        border-radius: 15rem;
+        margin: 1rem 0;
+    }
+
+    .skills__section-design
+    {
+
+        width: 95%;
+    }
+
+    .Skills__List-design
+    {
+        width: 17.2rem;
+    }
+
+    .languages__section-design
+    {
+        width: 30rem;
+    }
+
+    .Footer__items-flex > p
+    {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 992px)
+{
+    body
+    {
+        /*background: #201c9c;*/
+    }
+
+    .intro__div-grid
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav > h1
+    {
+        font-size: 1.3rem;
+    }
+
+    .AboutMe__section-design
+    {
+
+    }
+
+    .intro__list-design
+    {
+        border-top: 2px solid black;
+    }
+
+    .website__intro--image > img
+    {
+        border-radius: 15rem;
+        margin: 1rem 0;
+    }
+
+    .skills__section-design
+    {
+
+        width: 95%;
+    }
+
+    .Skills__List-design
+    {
+        width: 13rem;
+    }
+
+    .Skills__List-design > li
+    {
+        font-size: 1.1rem;
+    }
+
+    .languages__section-design
+    {
+        width: 30rem;
+    }
+
+    .Footer__items-flex > p
+    {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    body
+    {
+        /*background: #47dd1a;*/
+    }
+
+    .intro__div-grid
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav > h1
+    {
+        font-size: 1.8rem;
+    }
+
+    .AboutMe__section-design
+    {
+
+    }
+
+    .intro__list-design
+    {
+        border-top: 2px solid black;
+    }
+
+    .website__intro--image > img
+    {
+        border-radius: 15rem;
+        margin: 1rem 0;
+    }
+
+    .skills__section-design
+    {
+
+        width: 90%;
+    }
+
+    .Skills__List-design
+    {
+        width: 9rem;
+    }
+
+    .Skills__List-design > li
+    {
+        font-size: 1.1rem;
+    }
+
+    .languages__section-design
+    {
+        width: 30rem;
+    }
+
+    .Footer__items-flex > p
+    {
+        font-size: 1.0rem;
+    }
+}
+
+@media screen and (max-width: 576px)
+{
+    body
+    {
+        /*background: lightblue;*/
+    }
+
+    .intro__div-grid
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav > h1
+    {
+        font-size: 1.3rem;
+    }
+
+    .AboutMe__section-design
+    {
+
+    }
+
+    .intro__list-design
+    {
+        border-top: 2px solid black;
+    }
+
+    .website__intro--image > img
+    {
+        border-radius: 15rem;
+        margin: 1rem 0;
+    }
+
+    .skills__section-design
+    {
+
+        width: 95%;
+    }
+
+    .Skills__List-design
+    {
+        width: 7.6rem;
+    }
+
+    .Skills__List-design > li
+    {
+        font-size: 0.9rem;
+    }
+
+    .languages__section-design
+    {
+        width: 30rem;
+    }
+
+    .Footer__items-flex > p
+    {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (width < 576px)
+{
+    body
+    {
+        /*background: red;*/
+    }
+
+    .intro__div-grid
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav > h1
+    {
+        font-size: 1.3rem;
+    }
+
+    .AboutMe__section-design
+    {
+
+    }
+
+    .intro__list-design
+    {
+        border-top: 2px solid black;
+    }
+
+    .website__intro--image > img
+    {
+        border-radius: 15rem;
+        margin: 1rem 0;
+    }
+
+    .skills__section-design
+    {
+
+        width: 95%;
+    }
+
+    .Skills__List-design
+    {
+        width: 7.6rem;
+    }
+
+    .Skills__List-design > li
+    {
+        font-size: 0.9rem;
+    }
+
+    .languages__section-design
+    {
+        width: 30rem;
+    }
+
+    .Footer__items-flex > p
+    {
+        font-size: 0.8rem;
+    }
 }
