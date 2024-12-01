@@ -532,6 +532,11 @@ td
     padding: 0.3rem 0;
 }
 
+.table_list
+{
+    display: none;
+}
+
 @keyframes fadein
 {
     from {opacity: 0}
@@ -549,6 +554,11 @@ td
     body
     {
         /*background: #78195c;*/
+    }
+
+    .table_list
+    {
+        display: none;
     }
 
     nav > h1
@@ -594,6 +604,11 @@ td
     body
     {
         /*background: #21755b;*/
+    }
+
+    .table_list
+    {
+        display: none;
     }
 
     .intro__div-grid
@@ -652,6 +667,10 @@ td
         /*background: #201c9c;*/
     }
 
+    .table_list
+    {
+        display: none;
+    }
 
 
     nav > h1
@@ -709,6 +728,9 @@ td
         /*background: #47dd1a;*/
     }
 
+    .table_list
+
+
     nav > h1
     {
         font-size: 1.55rem;
@@ -754,6 +776,11 @@ td
     .Footer__items-flex > p
     {
         font-size: 1.0rem;
+    }
+
+    .table_list
+    {
+        display: none;
     }
 }
 
@@ -810,6 +837,11 @@ td
     {
         font-size: 0.8rem;
     }
+
+    .table
+    {
+        display: none;
+    }
 }
 
 @media screen and (width < 576px)
@@ -828,6 +860,11 @@ td
     nav > h1
     {
         font-size: 1.3rem;
+    }
+
+    .table
+    {
+        display: none;
     }
 
     .AboutMe__section-design
