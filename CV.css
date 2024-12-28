@@ -15,35 +15,19 @@ html
 {
     --education-grid-color: rgb(214, 198, 173);
     --roundness: 0.5rem;
-
-    --main-color: #ffd52b;
-    --secondary_color: #fff289;
     --opacity_color: rgba(255, 255, 255, 0.22);
 }
 
-nav
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav > h1
-{
-    font-size: 1.85rem;
-}
-
-
 body
 {
-    background-color: #dfcb8e;
+    background-image: linear-gradient(#dcb442,#dfcb8e);
     animation-name: slidein;
     animation-duration: 2s;
     margin: 0 auto;
 }
 
 
-header
+#cv-grid
 {
     display: flex;
     justify-content: space-between;
@@ -256,11 +240,6 @@ img:active
     border-radius: 6px;
 }
 
-.education__timeline-left
-{
-
-}
-
 .skills__section-design
 {
     width: 50%;
@@ -354,34 +333,6 @@ img:active
     justify-content: space-between;
 }
 
-.horizontalLine
-{
-    width: 100%;
-    height: 5px;
-    border-top: 4px solid black;
-    margin: 1rem 0 0.50rem 0;
-
-}
-
-.header__nav-list
-{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.header__nav-list > li
-{
-    padding: 10px;
-    color: black;
-    list-style: none;
-}
-.header__nav-list > li:hover
-{
-    background: white;
-}
-
 .work__Lists-flex
 {
     flex-direction: row;
@@ -432,21 +383,11 @@ img:active
     padding: 0.3rem 0;
 }
 
-li
-{
-    font-size: 1.1rem;
-}
-
 .socialMediaIconList
 {
     margin: 0px 20%;
     animation-name: FadeIn;
     animation-duration: 2s;
-}
-
-article
-{
-    margin: 50px 0px;
 }
 
 .socialMediaIconList > ul > li:hover
@@ -460,36 +401,7 @@ article
 
 }
 
-.footer__items-flex
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 1.55rem;
 
-    width: 97%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.footer__items-flex > p
-{
-    font-size: 1.1rem;
-    font-weight: bold;
-}
-
-.footer__items-flex > p > a:hover
-{
-    background-color: rgba(0, 0, 0, 0.2);
-
-}
-
-footer
-{
-    background-color: var(--main-color);
-
-}
 
 .center__text
 {
@@ -530,18 +442,6 @@ td
     border-left: 2px solid black;
     border-right: 2px solid black;
     padding: 0.3rem 0;
-}
-
-@keyframes fadein
-{
-    from {opacity: 0}
-    to {opacity: 100}
-}
-
-@keyframes slidein
-{
-    from {margin-left: 5rem}
-    to {margin-left: 0}
 }
 
 @media screen and (max-width: 1400px)

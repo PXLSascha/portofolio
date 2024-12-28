@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace, Geneva, Tahoma, sans-serif;
+}
+
+:root
+{
+    --button-beckground-collor: #5e5d5b;
+}
+
+main a
+{
+    text-decoration: none;
+    color: black;
+    background-color: #b87e0a;
+    padding: 1rem;
+    border-radius: 0.7rem;
+}
+
+main a:hover
+{
+    background-color: #f1a60d;
+}
+
+main
+{
+    margin: auto;
+    width: 95%;
+}
+
+body
+{
+    min-height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#main__column1-image
+{
+    grid-column: 1;
+    grid-row: 1;
+    row-span: 2;
+}
+
+#main__column1-image img
+{
+    border-radius: 20rem;
+}
+
+#main__column2-aboutme
+{
+    text-align: center;
+    margin-left: 3rem;
+}
+
+#main__grid
+{
+    width: 95%;
+    padding-top: 3rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    animation-name: slideinfrombelow, fadein;
+    animation-duration: 1.5s;
+
+}
+
+#main__column2_navlist
+{
+    margin-top: 8rem;
+    grid-column: 2;
+    grid-row: 2;
+    list-style: none;
+    display: flex;
+}
+
+#main__column2_navlist li
+{
+    margin: 0 1rem;
+    text-align: center;
+    align-items: center;
+}
+
+.flex
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main h1
+{
+    margin: 0 0 2rem 0;
+}
+
+main h2
+{
+    margin: 0 0 0.5rem 0;
+}
+
+@media only screen and (width > 1400px)
+{
+    footer
+    {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+@media only screen and (max-width: 1400px)
+{
+    main
+    {
+        margin: 0;
+        scale: 0.9;
+    }
+}
+
+@media only screen and (max-width: 1200px)
+{
+    body
+    {
+        overflow: scroll;
+        text-align: center;
+    }
+
+    #main__column2_navlist
+    {
+        align-items: center;
+        justify-content: center;
+    }
+
+    #main__grid
+    {
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #main__column1-image img
+    {
+        display: flex;
+        margin: auto;
+        margin-left: 3rem;
+        width: 32rem;
+        justify-content: center;
+        align-content: center;
+
+    }
+}
+
+@media only screen and (max-width: 786px)
+{
+    body
+    {
+        overflow: scroll;
+        text-align: center;
+    }
+
+    img
+    {
+        display: flex;
+        margin: auto;
+        width: 60%;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    #main__column2_navlist
+    {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #main__grid
+    {
+        width: 100%;
+    }
+}
+
+
